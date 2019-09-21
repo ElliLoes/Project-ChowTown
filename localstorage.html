@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Manager</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div style="width: 50%" class="mt-5 mx-auto">
+        <div class="container-fluid">
+            <a href="./index.html" target="_blank" class="btn btn-success btn-block">TO DEMO</a>
+            <p>Click this button to proceed to the application</p>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-6">
+                    <button id="buttonFillStorage" class="btn btn-primary btn-block">GENERATE DATA</button>
+                    <p>This button will create mock data for the application</p>
+                </div>
+                <div class="col-6">
+                    <button id="buttonClearStorage" class="btn btn-danger btn-block">CLEAR STORAGE</button>
+                    <p>This button will clear the local storage used by the application</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        let keyStorageUserRestaurants = 'chow_town_user_restaurants';
+        let keyStorageTrips = 'chow_town_trips';
+        let keyStorageTripsCurrentIndex = 'chow_town_trips_current_index';
+
+        let arrUserRestaurantsForStorage = [
+            {
+                restaurant_id: 'restaurant_a',
+                categories: 'Seafood',
+                image_url: './scripts/chicken.png',
+                location: 'Sydney',
+                name: 'Restaurant A',
+                price: '$',
+                rating: 2,
+                url: 'https://www.yelp.com.au/biz/belles-hot-chicken-barangaroo?osq=chicken'
+            },
+            {
+                restaurant_id: 'restaurant_b',
+                categories: 'Pizza',
+                image_url: './scripts/chicken.png',
+                location: 'Newcastle, Australia',
+                name: 'Restaurant B',
+                price: '$$',
+                rating: 3.3,
+                url: 'https://www.yelp.com.au/biz/belles-hot-chicken-barangaroo?osq=chicken'
+            },
+            {
+                restaurant_id: 'restaurant_c',
+                categories: 'Barbeque',
+                image_url: './scripts/chicken.png',
+                location: 'Bondi, Sydney',
+                name: 'Restaurant C',
+                price: '$$$',
+                rating: 5,
+                url: 'https://www.yelp.com.au/biz/belles-hot-chicken-barangaroo?osq=chicken'
+            },
+            {
+                restaurant_id: 'restaurant_d',
+                categories: 'Deep Fried',
+                image_url: './scripts/chicken.png',
+                location: 'Parramatta, Sydney',
+                name: 'Restaurant D',
+                price: '$',
+                rating: 4.3,
+                url: 'https://www.yelp.com.au/biz/belles-hot-chicken-barangaroo?osq=chicken'
+            }
+        ];
+        let arrTripsForStorage = [
+            {
+                trip_id: 'TRIP1',
+                trip_name: 'HUNGRY DAYS',
+                restaurant_ids: ['restaurant_a', 'restaurant_b', 'restaurant_c']
+            },
+            {
+                trip_id: 'TRIP2',
+                trip_name: 'FOOD COMA',
+                restaurant_ids: ['restaurant_a', 'restaurant_b']
+            },
+            {
+                trip_id: 'TRIP3',
+                trip_name: 'FRIED CHICKEN EVERY DAY',
+                restaurant_ids: ['restaurant_b', 'restaurant_c', 'restaurant_d']
+            }
+        ];
+
+        let buttonFillStorage = document.querySelector('#buttonFillStorage');
+        buttonFillStorage.addEventListener('click', function () {
+            localStorage.setItem(keyStorageUserRestaurants, JSON.stringify(arrUserRestaurantsForStorage));
+            localStorage.setItem(keyStorageTrips, JSON.stringify(arrTripsForStorage));
+            localStorage.setItem(keyStorageTripsCurrentIndex, JSON.stringify(arrTripsForStorage.length));
+        });
+
+
+        let buttonClearStorage = document.querySelector('#buttonClearStorage');
+        buttonClearStorage.addEventListener('click', function () {
+            localStorage.clear();
+        });
+
+    </script>
+</body>
+
+</html>

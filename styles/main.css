@@ -1,0 +1,550 @@
+body {
+    /* background: #26d1a9; */
+    background: linear-gradient(#26d1a9, transparent), linear-gradient(to top left, #00f29d, transparent), linear-gradient(to top right, #24009c, transparent);
+    color: white;
+    height: 100vh;
+    font-family: 'Bungee', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Fonts + Texts */
+
+h2 {
+    font-size: 2em;
+    font-family: 'Bungee', cursive;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+
+/* Navigation Top + Search */
+
+nav#nav-bar {
+    z-index: 3;
+    height: 85px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+    color: none;
+    border: 1px white solid;
+    background: transparent;
+}
+
+#search-icon {
+    width: 100px;
+    height: auto;
+    position: relative;
+}
+
+input#userInput {
+    height: 50px;
+    background-color: rgba(26, 26, 26, 0.3);
+    border: none;
+    border-bottom: 5px white solid;
+    border-radius: 5px;
+    transition: .5s ease;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Bungee', cursive;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding: 25px 10px 15px 10px;
+}
+
+input#userInput:focus {
+    height: 60px;
+    background: transparent;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    color: white !important;
+    background: transparent;
+}
+
+#userInput::-webkit-input-placeholder {
+    color: white;
+    font-size: 1.5em;
+}
+
+input.dropdown {
+    background-color: rgba(26, 26, 26, 0.3);
+    font-size: 1em;
+    color: white;
+    border: 2px solid white;
+    transition: .1s ease;
+    height: 45px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+input.dropdown:focus {
+    color: white;
+    background-color: rgba(26, 26, 26, 0.5);
+    border-radius: 30px;
+}
+
+
+/* Buttons + Hover */
+
+button.btn-add {
+    border: white 2px solid;
+    color: white;
+    background-color: rgba(26, 26, 26, 0.3);
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: .1s ease;
+}
+
+button:hover {
+    background: #1a1a1a;
+    border: 2px solid #1a1a1a;
+}
+
+button.btn-action {
+    border: white 2px solid;
+    color: white;
+    background: transparent;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.btn-green,
+.btn-pink {
+    background: #00f29d;
+    color: white;
+}
+
+.no-btn {
+    border: none;
+    background: none;
+}
+
+.no-btn:hover,
+.no-btn:focus {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.focus {
+    background-color: #db567e !important;
+}
+
+label.btn {
+    font-size: .8em !important;
+    padding: 5px !important;
+    margin: 0 !important;
+}
+
+
+/* Icons */
+
+img.clear {
+    width: auto;
+    height: 31px;
+}
+
+img.heart {
+    width: 20px;
+}
+
+
+/* Sections + Content  */
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+header {
+    border-bottom: 2px white solid;
+}
+
+.text-card h2 {
+    font-size: 2em;
+}
+
+.card-body {
+    padding: 20px 10px;
+}
+
+.bg-dark {
+    background-color: rgba(26, 26, 26, 0.5) !important;
+}
+
+.bg-pink {
+    background-color: rgba(194, 60, 96, 0.8) !important;
+}
+
+
+/* Table Results */
+
+.table-dark {
+    background-color: rgba(26, 26, 26, 0.6) !important;
+}
+
+img.food-icon {
+    width: 35px;
+}
+
+td.bubbleFont {
+    font-family: 'Bungee', cursive;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+
+/* Bites + Search Bar */
+
+input#searchBites {
+    height: 40px;
+    background-color: rgba(26, 26, 26, 0.3);
+    border: none;
+    border-radius: 5px;
+    transition: .5s ease;
+    font-size: 1em;
+    color: white;
+    padding-top: 15px;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+div.card {
+    width: 32%;
+    height: auto;
+    box-shadow: -5px 5px 5px rgba(26, 26, 26, 0.3);
+    padding: 10px 5px;
+    transition: .5s ease;
+}
+
+.dropdown-location {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* div.card:hover,
+.dropdown-menu:hover {
+    transform: scale(1.05);
+} */
+
+div.card h2 {
+    font-size: 1.2em;
+}
+
+img.remove,
+img.remove2,
+img.share,
+img.web,
+img.edit {
+    position: absolute;
+    transition: .5s ease;
+}
+
+img.edit {
+    width: 25px;
+    left: 10px;
+    top: 10px;
+}
+
+img.remove {
+    width: 20px;
+    right: 10px;
+    top: 0;
+}
+
+img.remove2 {
+    width: 20px;
+    right: 12px;
+    top: 10px;
+}
+
+img.share {
+    width: 25px;
+    right: 7px;
+    bottom: 0;
+}
+
+img.web {
+    width: 25px;
+    right: 40px;
+    bottom: 0;
+}
+
+img.remove:hover,
+img.remove2:hover,
+img.share:hover,
+img.web:hover,
+img.edit:hover {
+    transform: scale(1.2);
+}
+
+
+/* BG Pattern + Arrows */
+
+section#bgPattern {
+    background: url("../src/food\ pattern.png");
+    background-repeat: repeat;
+    height: 100%;
+    opacity: .2;
+    z-index: 0;
+    position: absolute;
+}
+
+section#arrows {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+img.arrowLWhite,
+img.arrowLBlack {
+    opacity: .8;
+    z-index: 6;
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+}
+
+img.arrowRWhite,
+img.arrowRBlack {
+    opacity: .8;
+    z-index: 6;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.fp-controlArrow {
+    top: 70px;
+}
+
+button.btn-table {
+    border: white 2px solid;
+    color: white;
+    background-color: rgba(26, 26, 26, 0.3);
+    border-radius: 30px;
+    padding: 2px 10px;
+    transition: .1s ease;
+    font-size: .8em;
+}
+button.btn-table:disabled {
+    opacity: 0.3;
+}
+button.btn-table:disabled:hover {
+    border: white 2px solid;
+    color: white;
+    background-color: rgba(26, 26, 26, 0.3);
+}
+
+button.btn-table:hover {
+    background: #1a1a1a;
+    border: 2px solid #1a1a1a;
+}
+
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Additions */
+
+#cardContain {
+    width: 1000px;
+    height: 200px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+
+.cardCookies {
+    width: 200px;
+    height: 150px;
+    box-shadow: -5px 5px 5px rgba(26, 26, 26, 0.3);
+    padding: 10px 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+    position: relative;
+    padding: 0 20px;
+}
+
+.cardCookies h2 {
+    font-size: 1.3em;
+}
+
+#tripButton {
+    background: transparent;
+    border: none;
+}
+
+.modal .modal-dialog .modal-content {
+    background-color: rgba(26, 26, 26, 0.95);
+    text-transform: uppercase;
+    z-index: 9999;
+    margin-top: 20px;
+}
+
+.modalButton,
+.modalButton:hover {
+    background-color: rgba(26, 26, 26, 0.5);
+    border-color: rgba(26, 26, 26, 0.5);
+}
+
+input {
+    color: #ffffff;
+}
+
+.form-input,
+.form-input:focus {
+    background: transparent;
+    color: #ffffff;
+}
+
+.dropdown-menu {
+    z-index: 20 !important;
+}
+
+.loading {
+    width: 200px;
+}
+
+.burger {
+    width: 125px;
+}
+
+.activeBtn,
+.activeBtn:hover,
+.activeBtn:focus,
+.activeBtn:active {
+    background: linear-gradient(#26d1a9, transparent), linear-gradient(to top left, #00f29d, transparent), linear-gradient(to top right, #24009c, transparent);
+    background-blend-mode: screen;
+    border-radius: 10px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1093px) {
+    button#addTopic {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav#nav-bar {
+        z-index: 3;
+        height: 75px;
+    }
+    input#userInput {
+        margin-top: 20px;
+        width: 90%;
+    }
+    .fp-controlArrow {
+        top: 65px;
+    }
+    img.food-icon {
+        display: none;
+    }
+    td.bubbleFont {
+        font-size: 1em;
+    }
+    div.card {
+        width: 450px;
+        height: auto;
+    }
+    button.btn-table {
+        font-size: .7em;
+        padding: 8px 10px;
+        border-radius: 15px;
+    }
+    .cardCookies {
+        width: 250px;
+        padding: 0 20px;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+
+/* extra stuff - Alex - dont change please. thanks. */
+
+.cardCookies>a:hover {
+    cursor: pointer;
+}
+
+#clearList:hover {
+    cursor: pointer;
+}
+
+.no-btn,
+.no-btn:hover,
+.no-btn:focus,
+.no-btn:active {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+}
+
+
+#tripCreateInput::placeholder, #tripRenameInput::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
+
+.logoAnchor {
+    outline: none;
+}
+
+#searchForm1 > span, #searchForm2 {
+    position: relative;
+}
+#searchForm1 > span > p {
+    position: absolute;
+    color: red;
+    bottom: -40px;
+    left: 30px;
+    font-size: 0.9rem;
+}
+#searchForm2 > p {
+    position: absolute;
+    color: red;
+    bottom: -40px;
+    left: 10px;
+    font-size: 0.9rem;
+    width: 120%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#searchForm2 > p.greytext {
+    color: grey;
+}
+
+#tripRenameButton h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
